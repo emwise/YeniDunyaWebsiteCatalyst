@@ -8,7 +8,7 @@ interface Props extends ComponentPropsWithRef<'button'> {
   asChild?: boolean;
   loading?: boolean;
   loadingText?: string;
-  variant?: 'primary' | 'secondary' | 'subtle';
+  variant?: 'primary' | 'secondary' | 'subtle' | 'black-transparent' | 'white-transparent' | 'white-gray-background';
 }
 
 const Button = forwardRef<ComponentRef<'button'>, Props>(
@@ -37,7 +37,13 @@ const Button = forwardRef<ComponentRef<'button'>, Props>(
             'bg-transparent text-primary hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary disabled:text-gray-400 disabled:hover:border-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400',
           variant === 'subtle' &&
             'border-none bg-transparent text-primary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary disabled:text-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400',
-          className,
+          variant === 'black-transparent' && 
+            'bg-transparent text-black border-black hover:border-black hover:bg-black hover:bg-opacity-10 hover:text-black disabled:text-gray-400 disabled:hover:border-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400',
+          variant === 'white-transparent' && 
+            'bg-transparent text-white border-white hover:border-white hover:bg-white hover:bg-opacity-30 hover:text-white disabled:text-gray-400 disabled:hover:border-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400',
+          variant === 'white-gray-background' && 
+          'bg-zinc-500/50 text-zinc-200 border-white rounded-full hover:border-white hover:bg-white hover:bg-opacity-30 hover:text-white disabled:text-gray-400 disabled:hover:border-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400',
+            className,
         )}
         disabled={disabled || loading}
         ref={ref}
