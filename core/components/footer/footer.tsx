@@ -74,7 +74,7 @@ export const Footer = async () => {
       contactInformation={data.settings?.contact ?? undefined}
       copyright={
         data.settings
-          ? `© ${new Date().getFullYear()} ${data.settings.storeName} – Powered by BigCommerce`
+          ? `© ${new Date().getFullYear()} ${data.settings.storeName}`
           : undefined
       }
       logo={data.settings ? logoTransformer(data.settings) : undefined}

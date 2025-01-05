@@ -8,6 +8,8 @@ import { revalidate } from '~/client/revalidate-target';
 import { ProductCardCarousel } from '~/components/product-card-carousel';
 import { ProductCardCarouselFragment } from '~/components/product-card-carousel/fragment';
 import { Slideshow } from '~/components/slideshow';
+import { Header } from '~/components/header';
+import { Cart } from '~/components/header/cart';
 
 const HomePageQuery = graphql(
   `
@@ -56,15 +58,16 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
+
       <Slideshow />
 
       <div className="my-10">
-        <ProductCardCarousel
+        {/* <ProductCardCarousel  //works so long as there are featured products otherwise doesn't display at all
           products={featuredProducts}
           showCart={false}
           showCompare={false}
           title={t('Carousel.featuredProducts')}
-        />
+        /> */}
         <ProductCardCarousel
           products={newestProducts}
           showCart={false}

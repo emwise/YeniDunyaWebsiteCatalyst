@@ -99,7 +99,7 @@
 //     <section
 //       aria-label={t('slideshow')}
 //       aria-roledescription="carousel"
-//       className={cn('relative -mx-6 overflow-hidden sm:-mx-10 md:-mx-12 lg:mx-0', className)}
+//       className={cn('relative -mx-6 overflow-hidden xsm:h-[200px] md:h-[600px] lg:h-[600px] sm:-mx-10 md:-mx-12', className)}
 //       onBlur={() => setIsHoverPaused(false)}
 //       onFocus={() => setIsHoverPaused(true)}
 //       onMouseEnter={() => setIsHoverPaused(true)}
@@ -115,7 +115,7 @@
 //               inert={index === activeSlide - 1 ? undefined : true}
 //               key={index}
 //             >
-//               <div className="relative">
+//               <div className="relative xsm:h-[200px] md:h-[600px] lg:h-[600px]">
 //                 {slide.image && (
 //                   <Image
 //                     alt={slide.image.altText}
@@ -137,7 +137,7 @@
 //                   <h2 className="text-5xl font-black lg:text-6xl">{slide.title}</h2>
 //                   {Boolean(slide.description) && <p className="max-w-xl">{slide.description}</p>}
 //                   {slide.cta && (
-//                     <Button asChild variant='white-transparent' className="w-fit">
+//                     <Button asChild variant='white-gray-background' className="w-fit">
 //                       <a href={slide.cta.href}>{slide.cta.label}</a>
 //                     </Button>
 //                   )}
@@ -147,7 +147,7 @@
 //           ))}
 //         </ul>
 //       </div>
-//       <div className="absolute bottom-12 start-12 flex items-center gap-4">
+//       <div className="absolute bottom-12 start-12 flex items-center gap-4 bg-zinc-500/50 text-zinc-200 rounded-full">
 //         <button
 //           aria-label={isPaused ? t('play') : t('pause')}
 //           className="inline-flex h-12 w-12 items-center justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
