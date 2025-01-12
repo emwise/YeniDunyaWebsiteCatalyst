@@ -8,8 +8,7 @@ import { revalidate } from '~/client/revalidate-target';
 import { ProductCardCarousel } from '~/components/product-card-carousel';
 import { ProductCardCarouselFragment } from '~/components/product-card-carousel/fragment';
 import { Slideshow } from '~/components/slideshow';
-import { Header } from '~/components/header';
-import { Cart } from '~/components/header/cart';
+
 
 const HomePageQuery = graphql(
   `

@@ -6,7 +6,7 @@ import SlideshowBG3 from './images/CannibalFlowerBanner6.jpg';
 
 const slides = [
   {
-    //cta: { label: '', href: '/#' },
+    cta: { label: 'Shop all', href: '/shop-all' },
     description: '',
     image: {
       src: SlideshowBG,

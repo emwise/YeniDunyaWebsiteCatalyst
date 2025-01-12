@@ -204,7 +204,6 @@ const clearLocaleFromPath = (path: string, locale: string) => {
   if (path.startsWith(`/${locale}/`)) {
     return path.replace(`/${locale}`, '');
   }
-
   return path;
 };
 
@@ -282,7 +281,6 @@ export const withRoutes: MiddlewareFactory = () => {
         case 'ProductRedirect': {
           // For dynamic redirects, assume an internal redirect and construct the URL from the path
           const redirectUrl = new URL(route.redirect.to.path, request.url);
-
           return NextResponse.redirect(redirectUrl, redirectConfig);
         }
 
