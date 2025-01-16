@@ -55,6 +55,18 @@ export const Header = async ({ cart }: Props) => {
     })),
   }));
 
+  //added the about page link to the header manually since I cant figure out
+  //how to do it 'properly' 
+  const aboutPage = [
+    {
+      label: 'About',
+      href: '/about-us/',
+      groups: []
+    }
+  ];
+
+  const newLinks = links.concat(aboutPage);
+
   return (
     <ComponentsHeader
       account={
@@ -98,7 +110,7 @@ export const Header = async ({ cart }: Props) => {
           </Suspense>
         </p>
       }
-      links={links}
+      links={newLinks}
       locales={localeLanguageRegionMap}
       logo={data.settings ? logoTransformer(data.settings) : undefined}
       search={<QuickSearch logo={data.settings ? logoTransformer(data.settings) : ''} />}

@@ -6,7 +6,7 @@ import SlideshowBG3 from './images/CannibalFlowerBanner6.jpg';
 
 const slides = [
   {
-    cta: { label: 'Shop all', href: '/shop-all' },
+    cta: { label: 'Shop the Collections', href: '/collections' },
     description: '',
     image: {
       src: SlideshowBG,
@@ -19,7 +19,7 @@ const slides = [
   },
 
   {
-    cta: { label: 'Shop the Ugly Cat', href: '/#' },
+    cta: { label: 'Shop the Ugly Cat', href: '/collections/ugly-cat' },
     description: '', 
     image: {
       src: SlideshowBG2,
@@ -32,7 +32,7 @@ const slides = [
   },
 
   {
-    cta: { label: 'Shop the Flower', href: '/#' },
+    cta: { label: 'Shop the Flower', href: '/collections/flower' },
     description: '',
     image: {
       src: SlideshowBG3,
