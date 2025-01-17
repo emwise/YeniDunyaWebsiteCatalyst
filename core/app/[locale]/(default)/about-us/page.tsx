@@ -11,7 +11,6 @@ import { Image } from '~/components/image';
 import { Link } from '~/components/link';
 
 import AboutUsPageBanner from './AboutUsPageBanner.jpg';
-import WebsiteLineBreak from './WebsiteLineBreak.png';
 
 interface Props {
   params: Promise<{
