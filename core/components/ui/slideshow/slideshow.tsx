@@ -1,5 +1,7 @@
+'use client';
+
 import useEmblaCarousel from 'embla-carousel-react';
-import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Link, Pause, Play } from 'lucide-react';
 import { StaticImageData } from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useReducer, useState } from 'react';
@@ -117,16 +119,16 @@ const Slideshow = ({ className, interval = 15_000, slides }: Props) => {
             >
               <div className="relative xsm:h-[200px] md:h-[600px] lg:h-[600px]">
                 {slide.image && (
-                  <Image
-                    alt={slide.image.altText}
-                    blurDataURL={slide.image.blurDataUrl}
-                    className="absolute -z-10 object-contain"
-                    fill
-                    placeholder="blur"
-                    priority={index === 0}
-                    sizes="(max-width: 1536px) 100vw, 1536px"
-                    src={slide.image.src}
-                  />
+                    <Image
+                      alt={slide.image.altText}
+                      blurDataURL={slide.image.blurDataUrl}
+                      className="absolute -z-10 object-contain"
+                      fill
+                      placeholder="blur"
+                      priority={index === 0}
+                      sizes="(max-width: 1536px) 100vw, 1536px"
+                      src={slide.image.src}
+                    />
                 )}
                 <div
                   className={cn(
@@ -137,7 +139,7 @@ const Slideshow = ({ className, interval = 15_000, slides }: Props) => {
                   <h2 className="text-5xl font-black lg:text-6xl">{slide.title}</h2>
                   {Boolean(slide.description) && <p className="max-w-xl">{slide.description}</p>}
                   {slide.cta && (
-                    <Button asChild variant='white-gray-background' className="w-fit">
+                    <Button asChild variant='white-gray-background' className="invisible md:visible w-fit">
                       <a href={slide.cta.href}>{slide.cta.label}</a>
                     </Button>
                   )}
@@ -147,7 +149,8 @@ const Slideshow = ({ className, interval = 15_000, slides }: Props) => {
           ))}
         </ul>
       </div>
-      <div className="absolute bottom-12 start-12 flex items-center gap-4 bg-zinc-500/50 text-zinc-200 rounded-full">
+      <div className='flex justify-center'>
+      <div className="absolute h-12 w-auto bottom-12 flex items-center gap-4 bg-zinc-500/50 text-zinc-200 rounded-full">
         <button
           aria-label={isPaused ? t('play') : t('pause')}
           className="inline-flex h-12 w-12 items-center justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20"
@@ -176,6 +179,7 @@ const Slideshow = ({ className, interval = 15_000, slides }: Props) => {
         >
           <ArrowRight />
         </button>
+      </div>
       </div>
     </section>
   );

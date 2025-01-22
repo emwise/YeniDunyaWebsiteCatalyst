@@ -1,7 +1,7 @@
 import { Slideshow as ComponentsSlideshow } from '~/components/ui/slideshow';
 
 import SlideshowBG from './images/LogoBanner2.jpg';
-import SlideshowBG2 from './images/BannerUglyCat4.jpg';
+import SlideshowBG2 from './images/UglyCatBanner 3.png';
 import SlideshowBG3 from './images/CannibalFlowerBanner6.jpg';
 
 const slides = [
@@ -19,7 +19,7 @@ const slides = [
   },
 
   {
-    cta: { label: 'Shop the Ugly Cat', href: '/collections/ugly-cat' },
+    cta: { label: 'Shop the Cat', href: '/collections/shirts' },
     description: '', 
     image: {
       src: SlideshowBG2,
@@ -32,7 +32,7 @@ const slides = [
   },
 
   {
-    cta: { label: 'Shop the Flower', href: '/collections/flower' },
+    cta: { label: 'Shop the Flower', href: '/collections/shirts' },
     description: '',
     image: {
       src: SlideshowBG3,
