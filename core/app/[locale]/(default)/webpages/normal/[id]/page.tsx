@@ -29,16 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function WebPage({ params }: Props) {
   const { id } = await params;
-  // console.log(id);
-  // console.log("data =");
-  const data = await getWebpageData({ id: decodeURIComponent(id) }); //original
-  //const data = await getWebpageData({ id: 'webpages/normal/shipping-returns' }); doesnt work
-  // const data = await getWebpageData({ id: '2' }); //doesnt work
-  // const data = await getWebpageData({ id: 'shipping-returns' });
-  // console.log("decodeURIComponent(id)");
-  // console.log(decodeURIComponent(id));
-  // console.log("await getWebpageData({ id: 'shipping-returns' });");
-  // console.log(data);
+  const data = await getWebpageData({ id: decodeURIComponent(id) }); 
+
   const webpage = data.node?.__typename === 'NormalPage' ? data.node : null;
   console.log("webpage: ", webpage);
   if (!webpage) {

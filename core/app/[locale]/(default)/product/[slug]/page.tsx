@@ -94,7 +94,8 @@ export default async function Product(props: Props) {
   }
 
   const category = removeEdgesAndNodes(product.categories).at(0);
-
+  // I commented out the reivew section from the product page unitl I implement
+  // the functionality to write a review. 
   return (
     <>
       {category && <Breadcrumbs category={category} />}
@@ -105,9 +106,9 @@ export default async function Product(props: Props) {
         <div className="lg:col-span-2">
           <Description product={product} />
           <Warranty product={product} />
-          <Suspense fallback={t('loading')}>
+          {/* <Suspense fallback={t('loading')}>
             <Reviews productId={product.entityId} />
-          </Suspense>
+          </Suspense> */}
         </div>
       </div>
 
