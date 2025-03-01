@@ -76,7 +76,7 @@ export const Details = ({ product }: Props) => {
 
       <h1 className="mb-4 text-4xl font-black lg:text-5xl">{product.name}</h1>
 
-      <ReviewSummary data={product} />
+      {/* <ReviewSummary data={product} /> */}
 
       {product.prices && (
         <div className="my-6 text-2xl font-bold lg:text-3xl">
@@ -145,7 +145,7 @@ export const Details = ({ product }: Props) => {
       <ProductForm data={product} />
 
       <div className="my-12">
-        <h2 className="mb-4 text-xl font-bold md:text-2xl">{t('additionalDetails')}</h2>
+        {/* <h2 className="mb-4 text-xl font-bold md:text-2xl">{t('additionalDetails')}</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {Boolean(product.sku) && (
             <div>
@@ -198,7 +198,7 @@ export const Details = ({ product }: Props) => {
                 <p>{customField.value}</p>
               </div>
             ))}
-        </div>
+        </div> */}
       </div>
       <ProductSchema product={product} />
     </div>

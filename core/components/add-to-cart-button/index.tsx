@@ -38,7 +38,7 @@ export const AddToCartButton = ({
 
   return (
     <Button
-      className={className}
+      className='bg-transparent text-black border-black hover:border-black hover:bg-black hover:bg-opacity-10 hover:text-black disabled:text-gray-400 disabled:hover:border-gray-400 disabled:hover:bg-transparent disabled:hover:text-gray-400'
       disabled={!product.inventory.isInStock}
       loading={loading}
       loadingText={t('processing')}
